@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "26203399110",
+    "firebase_url": "https://baja-fed08.firebaseio.com",
+    "project_id": "baja-fed08",
+    "storage_bucket": "baja-fed08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26203399110:android:06a892d9f6fc6451",
+        "android_client_info": {
+          "package_name": "com.example.appbaja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26203399110-ogik05j2n68dgjd0rjr969gd0s04ug0v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appbaja",
+            "certificate_hash": "5067ddd997e0c0628c31324bab49459f5a9bf5cc"
+          }
+        },
+        {
+          "client_id": "26203399110-lhiossd7sqs1na6ojjepli0k6t1o9i74.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfP2kS9g8ftelcGaLyJHpz7_R2guVIdBA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26203399110-lhiossd7sqs1na6ojjepli0k6t1o9i74.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
