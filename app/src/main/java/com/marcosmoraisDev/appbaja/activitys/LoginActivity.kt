@@ -1,13 +1,13 @@
-package com.example.appbaja.activitys
+package com.marcosmoraisDev.appbaja.activitys
 
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.appbaja.R
-import com.example.appbaja.config.getFirebaseAuth
-import com.example.appbaja.helpers.chamaTela
-import com.example.appbaja.helpers.msgToast
-import com.example.appbaja.model.Usuario
+import com.marcosmoraisDev.appbaja.R
+import com.marcosmoraisDev.appbaja.config.getFirebaseAuth
+import com.marcosmoraisDev.appbaja.helpers.chamaActivity
+import com.marcosmoraisDev.appbaja.helpers.msgToast
+import com.marcosmoraisDev.appbaja.model.Usuario
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import kotlinx.android.synthetic.main.activity_login.*
@@ -19,7 +19,7 @@ import android.widget.TextView
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.ProgressBar
-import com.example.appbaja.R.color.*
+import com.marcosmoraisDev.appbaja.R.color.*
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -36,16 +36,17 @@ class LoginActivity : AppCompatActivity() {
 
         //  Botões
         txvSingup.setOnClickListener {
-            chamaTela(this, SingupActivity::class.java, false)
+            chamaActivity(this, SingupActivity::class.java, false)
         }
 
         txvEsqueceuSenha.setOnClickListener {
-            chamaTela(this, ResetActivity::class.java, false)
+            chamaActivity(this, ResetActivity::class.java, false)
         }
 
         btnLogin.setOnClickListener {
             loga(getUsuarioActivity())
         }
+
     }
 
     private fun validaCampos(): Boolean {
@@ -103,7 +104,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun loginSucesso(msg: String) {
         msgToast(this, msg)
-        chamaTela(this, MainActivity::class.java, true)
+        chamaActivity(this, MainActivity::class.java, true)
     }
 
     private fun getUsuarioActivity(): Usuario {
@@ -163,7 +164,7 @@ class LoginActivity : AppCompatActivity() {
     private fun verificaUsuario(){
         var usuarioAtual = autenticacao.currentUser
         if (usuarioAtual != null){
-            chamaTela(this, MainActivity::class.java, true)
+            chamaActivity(this, MainActivity::class.java, true)
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.appbaja
+package com.marcosmoraisDev.appbaja
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

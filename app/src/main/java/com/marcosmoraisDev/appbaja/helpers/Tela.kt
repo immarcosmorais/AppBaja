@@ -1,19 +1,14 @@
-package com.example.appbaja.helpers
+package com.marcosmoraisDev.appbaja.helpers
 
 import android.R
-import android.annotation.SuppressLint
 import android.app.Activity
-import android.app.Dialog
 import android.content.Intent
-import android.support.v7.app.AlertDialog
-import android.view.Gravity
-import android.view.ViewGroup
-import android.view.WindowManager
+import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
 import android.widget.*
-import kotlinx.android.synthetic.main.activity_singup.*
 
 // Telas
-fun chamaTela(atualActivity: Activity, proximaActivity: Class<*>, finalizar: Boolean) {
+fun chamaActivity(atualActivity: Activity, proximaActivity: Class<*>, finalizar: Boolean) {
     var intent = Intent(atualActivity.applicationContext, proximaActivity)
     atualActivity.startActivity(intent)
     if (finalizar) atualActivity.finish()

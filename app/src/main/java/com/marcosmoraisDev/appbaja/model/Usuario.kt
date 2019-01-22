@@ -1,6 +1,6 @@
-package com.example.appbaja.model
+package com.marcosmoraisDev.appbaja.model
 
-import com.example.appbaja.config.getFirebaseDatabase
+import com.marcosmoraisDev.appbaja.config.getFirebaseDatabase
 import com.google.firebase.database.Exclude
 
 

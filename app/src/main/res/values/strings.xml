@@ -53,4 +53,9 @@
     <string name="msg_sucesso_recupera_senha">Foi enviado um email de recuperação, verifique sua caixa de mensagem.
     </string>
     <string name="msg_error_recupera_senha">Não foi possivel recuperar a sua senha</string>
+    <string name="title_config_conta">Alterar dados</string>
+    <string name="title_config_senha">Alterar senha</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

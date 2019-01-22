@@ -1,4 +1,4 @@
-package com.example.appbaja.activitys
+package com.marcosmoraisDev.appbaja.activitys
 
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
@@ -10,9 +10,9 @@ import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
-import com.example.appbaja.R
-import com.example.appbaja.config.getFirebaseAuth
-import com.example.appbaja.helpers.msgToast
+import com.marcosmoraisDev.appbaja.R
+import com.marcosmoraisDev.appbaja.config.getFirebaseAuth
+import com.marcosmoraisDev.appbaja.helpers.msgToast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_reset.*
 

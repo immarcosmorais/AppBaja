@@ -1,4 +1,4 @@
-package com.example.appbaja.activitys
+package com.marcosmoraisDev.appbaja.activitys
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -16,13 +16,13 @@ import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
-import com.example.appbaja.R
-import com.example.appbaja.config.getFirebaseAuth
-import com.example.appbaja.config.getStorageReference
-import com.example.appbaja.helpers.*
-import com.example.appbaja.model.Usuario
-import com.example.marcos.bajaapp.helper.codificarBase64
-import com.example.marcos.bajaapp.helper.validarPermissoes
+import com.marcosmoraisDev.appbaja.R
+import com.marcosmoraisDev.appbaja.config.getFirebaseAuth
+import com.marcosmoraisDev.appbaja.config.getStorageReference
+import com.marcosmoraisDev.appbaja.helpers.*
+import com.marcosmoraisDev.appbaja.model.Usuario
+import com.marcosmoraisDev.marcos.bajaapp.helper.codificarBase64
+import com.marcosmoraisDev.marcos.bajaapp.helper.validarPermissoes
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_singup.*
@@ -30,7 +30,6 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import java.io.ByteArrayOutputStream
-import kotlin.coroutines.EmptyCoroutineContext
 
 
 class SingupActivity : AppCompatActivity() {

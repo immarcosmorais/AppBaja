@@ -1,4 +1,4 @@
-package com.example.appbaja.activitys
+package com.marcosmoraisDev.appbaja.activitys
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -6,13 +6,16 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.view.Menu
 import android.view.MenuItem
-import com.example.appbaja.R
-import com.example.appbaja.config.getFirebaseAuth
-import com.example.appbaja.helpers.chamaTela
-import com.example.appbaja.helpers.msgToast
+import com.marcosmoraisDev.appbaja.R
+import com.marcosmoraisDev.appbaja.config.getFirebaseAuth
+import com.marcosmoraisDev.appbaja.helpers.chamaActivity
+import com.marcosmoraisDev.appbaja.helpers.msgToast
 import com.google.firebase.auth.FirebaseAuth
+import com.marcosmoraisDev.appbaja.fragment.ContatosFragment
+import com.marcosmoraisDev.appbaja.fragment.EquipeFragment
+import com.marcosmoraisDev.appbaja.fragment.EventosFragment
+import com.marcosmoraisDev.appbaja.fragment.NavegacaoFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import java.lang.Exception
@@ -41,6 +44,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         //Meu codigo
         this.autenticacao = getFirebaseAuth()!!
+//        configuraToolbar()
+
     }
 
     override fun onBackPressed() {
@@ -72,40 +77,55 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (item.itemId) {
 
-            R.id.nav_eventos ->{
-                msgToast(this, "Implementando...")
+            R.id.nav_eventos -> {
+                var fragment = EventosFragment()
+                var fragmentTransaction = supportFragmentManager.beginTransaction()
+                fragmentTransaction.replace(R.id.frameContainer, fragment)
+                fragmentTransaction.commit()
             }
 
-            R.id.nav_navegacao ->{
-                msgToast(this, "Implementando...")
+            R.id.nav_navegacao -> {
+                var fragment = NavegacaoFragment()
+                var fragmentTransaction = supportFragmentManager.beginTransaction()
+                fragmentTransaction.replace(R.id.frameContainer, fragment)
+                fragmentTransaction.commit()
             }
 
-            // Configuração
-            R.id.nav_contatos ->{
-                msgToast(this, "Implementando...")
+            R.id.nav_contatos -> {
+                var fragment = ContatosFragment()
+                var fragmentTransaction = supportFragmentManager.beginTransaction()
+                fragmentTransaction.replace(R.id.frameContainer, fragment)
+                fragmentTransaction.commit()
             }
 
-            R.id.nav_conta ->{
-                msgToast(this, "Implementando...")
+            R.id.nav_equipe -> {
+                var fragment = EquipeFragment()
+                var fragmentTransaction = supportFragmentManager.beginTransaction()
+                fragmentTransaction.replace(R.id.frameContainer, fragment)
+                fragmentTransaction.commit()
             }
 
-            R.id.nav_definicoes ->{
+            R.id.nav_conta -> {
+                chamaActivity(this, ConfigContaActivity::class.java, false)
+            }
+
+            R.id.nav_definicoes -> {
                 msgToast(this, "Implementando...")
             }
 
             // Comunicação
-            R.id.nav_share ->{
+            R.id.nav_share -> {
                 msgToast(this, "Implementando...")
             }
 
-            R.id.nav_send ->{
+            R.id.nav_send -> {
                 msgToast(this, "Implementando...")
             }
 
 
             R.id.nav_sair -> {
                 deslogaUsuario()
-                chamaTela(this, LoginActivity::class.java, true)
+                chamaActivity(this, LoginActivity::class.java, true)
             }
         }
 
@@ -116,8 +136,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun deslogaUsuario() {
         try {
             autenticacao.signOut()
-        }catch (e: Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
     }
+
+
 }

@@ -1,6 +1,6 @@
-package com.example.marcos.bajaapp.helper
+package com.marcosmoraisDev.marcos.bajaapp.helper
 
-import com.example.appbaja.config.getFirebaseAuth
+import com.marcosmoraisDev.appbaja.config.getFirebaseAuth
 
 fun getIdUsuarioFirebase():String{
     var id = getFirebaseAuth()!!.currentUser!!.email

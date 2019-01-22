@@ -8,17 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:26203399110:android:06a892d9f6fc6451",
+        "mobilesdk_app_id": "1:26203399110:android:4342de398108eebd",
         "android_client_info": {
-          "package_name": "com.example.appbaja"
+          "package_name": "com.marcosmoraisDev.appbaja"
         }
       },
       "oauth_client": [
         {
-          "client_id": "26203399110-ogik05j2n68dgjd0rjr969gd0s04ug0v.apps.googleusercontent.com",
+          "client_id": "26203399110-6ifmm6hc3thp1s9e5dtq8hso3hrnhvid.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.appbaja",
+            "package_name": "com.marcosmoraisDev.appbaja",
             "certificate_hash": "5067ddd997e0c0628c31324bab49459f5a9bf5cc"
           }
         },

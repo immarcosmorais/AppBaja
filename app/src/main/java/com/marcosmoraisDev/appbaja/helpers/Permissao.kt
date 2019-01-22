@@ -1,11 +1,10 @@
-package com.example.marcos.bajaapp.helper
+package com.marcosmoraisDev.marcos.bajaapp.helper
 
 import android.app.Activity
 import android.content.pm.PackageManager
 import android.os.Build
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
-import android.support.v7.app.AlertDialog
 
 fun validarPermissoes(permissioes: Array<String>, activity:Activity, requestCode:Int):Boolean{
     if (Build.VERSION.SDK_INT > 22){

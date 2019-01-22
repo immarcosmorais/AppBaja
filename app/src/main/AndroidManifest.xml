@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.appbaja">
+          package="com.marcosmoraisDev.appbaja">
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.READ_PROFILE"/>
@@ -20,18 +20,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".activitys.ConfigContaActivity">
+        <activity android:name="com.marcosmoraisDev.appbaja.activitys.ConfigContaActivity"
+                  android:parentActivityName=".activitys.MainActivity">
         </activity>
-        <activity android:name=".activitys.ResetActivity">
+        <activity android:name="com.marcosmoraisDev.appbaja.activitys.ResetActivity">
         </activity>
         <activity
-                android:name=".activitys.MainActivity"
+                android:name="com.marcosmoraisDev.appbaja.activitys.MainActivity"
                 android:label="@string/title_activity_main"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".activitys.SingupActivity">
+        <activity android:name="com.marcosmoraisDev.appbaja.activitys.SingupActivity">
         </activity>
-        <activity android:name=".activitys.LoginActivity">
+        <activity android:name="com.marcosmoraisDev.appbaja.activitys.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

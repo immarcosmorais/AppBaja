@@ -1,4 +1,4 @@
-package com.example.appbaja.config
+package com.marcosmoraisDev.appbaja.config
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
