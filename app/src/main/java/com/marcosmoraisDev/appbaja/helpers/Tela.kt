@@ -14,6 +14,12 @@ fun chamaActivity(atualActivity: Activity, proximaActivity: Class<*>, finalizar:
     if (finalizar) atualActivity.finish()
 }
 
+fun chamaFragment(manager: FragmentManager , fragment: Fragment){
+    var fragmentTransaction = manager.beginTransaction()
+    fragmentTransaction.replace(com.marcosmoraisDev.appbaja.R.id.frameContainer, fragment)
+    fragmentTransaction.commit()
+}
+
 fun msgToast(atualActivity: Activity, msg: String) {
     Toast.makeText(atualActivity.applicationContext, msg, Toast.LENGTH_LONG).show()
 }

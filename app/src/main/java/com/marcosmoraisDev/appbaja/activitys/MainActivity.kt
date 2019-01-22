@@ -16,6 +16,7 @@ import com.marcosmoraisDev.appbaja.fragment.ContatosFragment
 import com.marcosmoraisDev.appbaja.fragment.EquipeFragment
 import com.marcosmoraisDev.appbaja.fragment.EventosFragment
 import com.marcosmoraisDev.appbaja.fragment.NavegacaoFragment
+import com.marcosmoraisDev.appbaja.helpers.chamaFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import java.lang.Exception
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         //Meu codigo
         this.autenticacao = getFirebaseAuth()!!
-//        configuraToolbar()
+        chamaFragment(supportFragmentManager, EventosFragment())
 
     }
 
@@ -78,31 +79,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
 
             R.id.nav_eventos -> {
-                var fragment = EventosFragment()
-                var fragmentTransaction = supportFragmentManager.beginTransaction()
-                fragmentTransaction.replace(R.id.frameContainer, fragment)
-                fragmentTransaction.commit()
+                chamaFragment(supportFragmentManager, EventosFragment())
             }
 
             R.id.nav_navegacao -> {
-                var fragment = NavegacaoFragment()
-                var fragmentTransaction = supportFragmentManager.beginTransaction()
-                fragmentTransaction.replace(R.id.frameContainer, fragment)
-                fragmentTransaction.commit()
+                chamaFragment(supportFragmentManager, NavegacaoFragment())
             }
 
             R.id.nav_contatos -> {
-                var fragment = ContatosFragment()
-                var fragmentTransaction = supportFragmentManager.beginTransaction()
-                fragmentTransaction.replace(R.id.frameContainer, fragment)
-                fragmentTransaction.commit()
+                chamaFragment(supportFragmentManager, ContatosFragment())
             }
 
             R.id.nav_equipe -> {
-                var fragment = EquipeFragment()
-                var fragmentTransaction = supportFragmentManager.beginTransaction()
-                fragmentTransaction.replace(R.id.frameContainer, fragment)
-                fragmentTransaction.commit()
+                chamaFragment(supportFragmentManager, EquipeFragment())
             }
 
             R.id.nav_conta -> {
@@ -122,7 +111,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 msgToast(this, "Implementando...")
             }
 
-
             R.id.nav_sair -> {
                 deslogaUsuario()
                 chamaActivity(this, LoginActivity::class.java, true)
@@ -140,6 +128,5 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             e.printStackTrace()
         }
     }
-
 
 }
