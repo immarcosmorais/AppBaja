@@ -13,24 +13,27 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import kotlinx.android.synthetic.main.activity_login.*
 import java.lang.Exception
 import android.widget.LinearLayout
-import android.view.WindowManager
 import android.support.v7.app.AlertDialog
 import android.widget.TextView
-import android.view.Gravity
-import android.view.ViewGroup
 import android.widget.ProgressBar
 import com.marcosmoraisDev.appbaja.R.color.*
 import com.google.firebase.auth.FirebaseAuth
+import android.content.Context.INPUT_METHOD_SERVICE
+import android.support.v4.content.ContextCompat.getSystemService
+import android.content.Context
+import android.view.inputmethod.InputMethodManager
+import android.view.KeyEvent.KEYCODE_ENTER
+import android.view.*
 
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var dialog:AlertDialog
+    private lateinit var dialog: AlertDialog
     private lateinit var autenticacao: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(com.marcosmoraisDev.appbaja.R.layout.activity_login)
 
         this.autenticacao = getFirebaseAuth()!!
 
@@ -161,9 +164,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun verificaUsuario(){
+    private fun verificaUsuario() {
         var usuarioAtual = autenticacao.currentUser
-        if (usuarioAtual != null){
+        if (usuarioAtual != null) {
             chamaActivity(this, MainActivity::class.java, true)
         }
     }

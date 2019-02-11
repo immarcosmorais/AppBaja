@@ -20,19 +20,30 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.marcosmoraisDev.appbaja.activitys.ConfigContaActivity"
-                  android:parentActivityName=".activitys.MainActivity">
+        <activity
+                android:name=".activitys.ConfiguraContaActivity"
+                android:label="@string/title_activity_configura_conta">
         </activity>
-        <activity android:name="com.marcosmoraisDev.appbaja.activitys.ResetActivity">
+        <activity android:name=".activitys.EditaSenhaActivity">
+        </activity>
+        <activity android:name=".activitys.EditaContaActivity">
         </activity>
         <activity
-                android:name="com.marcosmoraisDev.appbaja.activitys.MainActivity"
+                android:name=".activitys.ConfigContaActivity"
+                android:parentActivityName=".activitys.MainActivity">
+        </activity>
+        <activity android:name=".activitys.ResetActivity">
+        </activity>
+        <activity
+                android:name=".activitys.MainActivity"
                 android:label="@string/title_activity_main"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name="com.marcosmoraisDev.appbaja.activitys.SingupActivity">
-        </activity>
-        <activity android:name="com.marcosmoraisDev.appbaja.activitys.LoginActivity">
+        <activity android:name=".activitys.SingupActivity">
+        </activity> <!-- Oculta teclado -->
+        <activity
+                android:name=".activitys.LoginActivity"
+                android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

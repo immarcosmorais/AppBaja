@@ -42,7 +42,7 @@ class SingupActivity : AppCompatActivity() {
     private lateinit var dialog:AlertDialog
     private lateinit var autenticacao: FirebaseAuth
     private lateinit var storageReference: StorageReference
-    private lateinit var imagem: Bitmap
+    private var imagem: Bitmap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -201,6 +201,8 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+
     <Button
             android:text="@string/text_singup"
             android:layout_width="match_parent"
