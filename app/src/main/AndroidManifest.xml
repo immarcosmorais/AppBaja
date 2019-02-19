@@ -20,25 +20,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity
-                android:name=".activitys.ConfiguraContaActivity"
-                android:label="@string/title_activity_configura_conta">
-        </activity>
-        <activity android:name=".activitys.EditaSenhaActivity">
-        </activity>
-        <activity android:name=".activitys.EditaContaActivity">
-        </activity>
-        <activity
-                android:name=".activitys.ConfigContaActivity"
-                android:parentActivityName=".activitys.MainActivity">
-        </activity>
-        <activity android:name=".activitys.ResetActivity">
-        </activity>
-        <activity
-                android:name=".activitys.MainActivity"
-                android:label="@string/title_activity_main"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+        <!---->
+        <!--<activity android:name=".activitys.ConfiguraContaActivity"></activity>-->
+        <!--<activity android:name=".activitys.SettingsActivity" android:label="@string/title_activity_configura_conta"></activity>-->
+        <activity android:name=".activitys.EditaSenhaActivity"></activity>
+        <activity android:name=".activitys.EditaContaActivity"></activity>
+        <activity android:name=".activitys.ConfigContaActivity" android:parentActivityName=".activitys.MainActivity"></activity>
+        <activity android:name=".activitys.ResetActivity"></activity>
+        <activity android:name=".activitys.MainActivity" android:label="@string/title_activity_main" android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".activitys.SingupActivity">
         </activity> <!-- Oculta teclado -->
         <activity

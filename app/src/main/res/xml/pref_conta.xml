@@ -1,11 +1,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="@string/pref_title_categoria_basico">
-        <EditTextPreference android:title="@string/title_dados"
+        <Preference android:title="@string/title_dados"
                             android:key="key_dados"
                             android:icon="@drawable/ic_person_24dp"
                             android:summary="@string/summary_dados"/>
-        <EditTextPreference android:title="@string/title_senha"
+        <Preference android:title="@string/title_senha"
                             android:key="key_senha"
                             android:icon="@drawable/ic_vpn_key_24dp"
                             android:summary="@string/summary_senha"/>
